@@ -77,6 +77,11 @@
  
 
 
+
+
+<a id='wrangling'></a>
+## 数据整理
+
 ```
 import pandas as pd
 import numpy as np
@@ -89,9 +94,6 @@ plt.rcParams['axes.unicode_minus']=False
 %matplotlib inline
 %config InlineBackend.figure_format = 'retina'
 ```
-
-<a id='wrangling'></a>
-## 数据整理
 
 
 ### 常规属性
