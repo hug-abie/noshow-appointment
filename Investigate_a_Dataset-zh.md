@@ -1032,7 +1032,7 @@ df.corr()
 
 #### 1.错误数据清理
 
-1) 删除时间异常的记录
+a. 删除时间异常的记录
 
 
 ```
@@ -1092,7 +1092,7 @@ df[df['AppointmentDay'].dt.date<df['ScheduledDay'].dt.date]
 
 <br>
 
-2) 删除年龄异常的记录。
+b. 删除年龄异常的记录。
 
 
 ```
@@ -1223,7 +1223,7 @@ df.info()
 
 #### 4.新增变量
 
-1) 新增一列，记录居民预约后需要等待的天数，取名为“Awaiting_day”
+a. 新增一列，记录居民预约后需要等待的天数，取名为“Awaiting_day”
 
 
 ```
@@ -1247,7 +1247,7 @@ plt.title(u'所有预约的等待天数',fontsize=14);
 
 <br>
 
-2) 新增一列，记录本次预约是该居民的第几次预约,取名为“Appointment_rank”
+b. 新增一列，记录本次预约是该居民的第几次预约,取名为“Appointment_rank”
 
 
 ```
@@ -1287,7 +1287,7 @@ df['Appointment_rank'].describe()
 
 <br>
 
-3) 新增两列，分别记录居民的过往出席次数和过往缺席次数，取名分别为“Show_record”和“Absent_record”
+c. 新增两列，分别记录居民的过往出席次数和过往缺席次数，取名分别为“Show_record”和“Absent_record”
 
 
 ```
@@ -1307,7 +1307,7 @@ df.index=df.index.droplevel()
 
 <br>
 
-4) 新增一列，记录居民的总预约次数，取名为“Appointment_count”
+d. 新增一列，记录居民的总预约次数，取名为“Appointment_count”
 
 
 ```
@@ -1317,7 +1317,7 @@ df=df.merge(ap_count,on='Patient_Id',how='left')
 
 <br>
 
-5) 新增两列，分别记录居民的总出席次数和总缺席次数，取名分别为“Show_count”和“Absent_count”
+e. 新增两列，分别记录居民的总出席次数和总缺席次数，取名分别为“Show_count”和“Absent_count”
 
 
 ```
